@@ -5,16 +5,26 @@
 ## 🚀 Tecnologías Utilizadas
 
 - 🐍 Python 3.10+
-- ⚡ FastAPI
-- 🚀 Uvicorn
+- ⚡ Flask (API REST)
+- 🚀 Uvicorn (servidor ASGI)
 - 🧪 uv (gestor de dependencias rápido)
-- 🗄️ Base de datos (Mongo)
+- 🍃 MongoDB (base de datos NoSQL)
+
+## ✨ ¿Qué hace este backend?
+
+- 📋 Permite crear, leer, actualizar y eliminar tareas (CRUD)
+- ✅ Marca tareas como completadas o pendientes
+- 🗂️ Filtra tareas por estado
+- 🕒 Guarda fecha de creación y actualización
+- 🔒 Permite autenticación de usuarios (si aplica)
+- 🌐 API RESTful lista para conectar con cualquier frontend
 
 ## 📦 Características
 
-- API RESTful para gestión de tareas
-- Conexión a base de datos
 - Estructura modular y escalable
+- Conexión eficiente a MongoDB
+- Código limpio y documentado
+- Listo para producción y desarrollo
 
 ## 🛠️ Instalación
 
