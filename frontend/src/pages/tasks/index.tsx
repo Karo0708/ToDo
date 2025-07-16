@@ -75,24 +75,22 @@ export default function Index() {
     }
   ]
 
-
   const totals = {
-    "total": data.length,
-    "active": data.filter(task => task.status === "pending").length,
-    "completed": data.filter(task => task.status === "completed").length
-  }
+    total: data.length,
+    active: data.filter(task => task.status === "pending").length,
+    completed: data.filter(task => task.status === "completed").length
+  };
 
   const progress = Math.round((totals.completed / totals.total) * 100);
 
-
   return (
-    <div className="flex flex-col w-full h-screen overflow-hidden">
+    <div className="flex flex-col w-full h-screen md:overflow-hidden">
       <Header />
-      <div className="flex-1 w-full p-4 bg-white overflow-hidden items-center justify-center">
-        <div className="flex flex-col md:flex-row gap-4 items-start justify-center w-full max-w-6xl mx-auto overflow-hidden">
-          <div className="w-full md:w-1/3">
-            <div className="relative w-80 mb-4 rounded-md border border-stone-200 transition-colors">
-              <span className="absolute left-3 top-1/2 transform -translate-y-1/2 text-stone-500 ">
+      <div className="flex-1 w-full p-4 bg-white md:overflow-hidden items-center justify-center">
+        <div className="flex flex-col md:flex-row gap-4 items-start justify-center w-full max-w-6xl mx-auto md:overflow-hidden">
+          <div className="w-full md:w-1/3 lg:w-1/4">
+            <div className="relative w-full mb-4 rounded-md border border-stone-200 transition-colors">
+              <span className="absolute left-3 top-1/2 transform -translate-y-1/2 text-stone-500">
                 <BiSearchAlt size={20} />
               </span>
               <input
@@ -103,14 +101,14 @@ export default function Index() {
               />
             </div>
             <TasksDashboard totals={totals} progress={progress} />
-            <button className="w-80 mt-4 bg-blue-600 text-white py-2 rounded-md hover:bg-blue-700 transition-colors">
+            <button className="w-full mt-4 bg-blue-600 text-white py-2 rounded-md hover:bg-blue-700 transition-colors">
               <span className="flex items-center justify-center gap-2">
                 <MdOutlinePlaylistAddCircle size={30} />
                 New Task
               </span>
             </button>
           </div>
-          <div className="flex-1 overflow-hidden">
+          <div className="flex-1 w-full">
             <TasksList data={data} total={totals.total} />
           </div>
         </div>

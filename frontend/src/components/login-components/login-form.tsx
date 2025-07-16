@@ -9,10 +9,10 @@ export function LoginForm() {
   const [password, setPassword] = useState('');
 
   const handleLogin = () => {
-    if (!email.trim() || !password.trim()) {
-      alert('Please enter both email and password.');
-      return;
-    }
+    // if (!email.trim() || !password.trim()) {
+    //   alert('Please enter both email and password.');
+    //   return;
+    // }
     navigate({ to: '/tasks' });
   };
 
@@ -62,7 +62,7 @@ export function LoginForm() {
           >
             <span className="flex items-center justify-center gap-2">
               <CiLogin size={20} />
-              <span>Login</span>
+              <span>Sign in</span>
             </span>
           </button>
         </form>
@@ -73,7 +73,7 @@ export function LoginForm() {
         >
           <span className="flex items-center justify-center gap-2">
             <ImUserPlus size={20} />
-            <span>Register</span>
+            <span>Sign up</span>
           </span>
         </button>
       </div>

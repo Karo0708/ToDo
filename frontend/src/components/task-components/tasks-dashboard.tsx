@@ -7,7 +7,7 @@ import type { TasksDashboardProps } from "../tasks/types";
 
 export default function TasksDashboard({ totals, progress }: TasksDashboardProps) {
   return (
-    <div className="grid grid-cols-2 md:grid-cols-1 gap-4 w-full max-w-xs">
+    <div className="grid grid-cols-1 md:grid-cols-1 gap-4 w-full">
       <TaskStatus title="Total Tasks" number={totals.total}>
         <MdOutlinePlaylistAddCheckCircle size={30} />
       </TaskStatus>
